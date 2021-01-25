@@ -17,6 +17,22 @@ becomes:
 go get github.com/chiselwright/go-phoneticise
 ```
 
+## Example
+
+```go
+package main
+
+import (
+    "fmt"
+
+    "github.com/chiselwright/go-phoneticise"
+)
+
+func main() {
+    fmt.Println(phoneticise.Phoneticise("Chisel"))
+}
+```
+
 ## cli-client
 
 You can experiment with the library by running:
