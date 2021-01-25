@@ -11,6 +11,12 @@ becomes:
 
 > Hotel Echo Lima Lima Oscar (space) Whiskey Oscar Romeo Lima Delta
 
+## Installation
+
+```sh
+go get github.com/chiselwright/go-phoneticise
+```
+
 ## cli-client
 
 You can experiment with the library by running:
