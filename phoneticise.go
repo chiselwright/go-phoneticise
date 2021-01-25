@@ -2,7 +2,7 @@
 package phoneticise
 
 import (
-	"log"
+	"fmt"
 	"regexp"
 	"strings"
 	"unicode"
@@ -81,8 +81,11 @@ func Lookup(r rune) string {
 	}
 
 	val, ok := mapper[unicode.ToUpper(r)]
+
 	if !ok {
-		log.Fatalf("couldn't find %q", r)
+		// missing from the lookup
+		// retuin the initial value
+		val = fmt.Sprintf("{%c}", r)
 	}
 
 	return val

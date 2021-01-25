@@ -56,4 +56,17 @@ func TestPhoneticise(t *testing.T) {
 	if want != got {
 		t.Errorf("want '%s', got '%s'", want, got)
 	}
+
+	want = "Hotel Echo Lima Lima Oscar (space) Whiskey Oscar Romeo Lima Delta {!}"
+	got = phoneticise.Phoneticise("Hello World!")
+	if want != got {
+		t.Errorf("want '%s', got '%s'", want, got)
+	}
+
+	// 여보세요!
+	want = "{여} {보} {세} {요}"
+	got = phoneticise.Phoneticise("여보세요")
+	if want != got {
+		t.Errorf("want '%s', got '%s'", want, got)
+	}
 }
