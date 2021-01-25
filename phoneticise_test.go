@@ -1,8 +1,9 @@
 package phoneticise_test
 
 import (
-	"phoneticise"
 	"testing"
+
+	"github.com/chiselwright/phoneticise"
 )
 
 func TestLookup(t *testing.T) {

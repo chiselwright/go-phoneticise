@@ -5,8 +5,9 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"phoneticise"
 	"strings"
+
+	"github.com/chiselwright/phoneticise"
 )
 
 func main() {
