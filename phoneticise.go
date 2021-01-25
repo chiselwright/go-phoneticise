@@ -3,6 +3,7 @@ package phoneticise
 
 import (
 	"log"
+	"regexp"
 	"strings"
 	"unicode"
 )
@@ -12,13 +13,22 @@ import (
 func Phoneticise(s string) string {
 	results := make([]string, 0)
 
+	// remove leading and trailing whitespace
+	s = strings.TrimSpace(s)
+	// collapse duplicate whitespace
+	spaceRegexp := regexp.MustCompile(`\s+`)
+	s = spaceRegexp.ReplaceAllString(s, " ")
+
+	var val string
+
 	for _, c := range s {
-		// don't lookup spaces
+		// mark spaces
 		if c == ' ' {
-			continue
+			val = "(space)"
+		} else {
+			// grab the appropriate value and add to our results
+			val = Lookup(c)
 		}
-		// grab the appropriate value and add to our results
-		val := Lookup(c)
 		results = append(results, val)
 	}
 

@@ -45,13 +45,13 @@ func TestPhoneticise(t *testing.T) {
 		t.Errorf("want '%s', got '%s'", want, got)
 	}
 
-	want = "Lima Mike One Eight Charlie Tango Victor"
+	want = "Lima Mike One Eight (space) Charlie Tango Victor"
 	got = phoneticise.Phoneticise("LM18 CTV")
 	if want != got {
 		t.Errorf("want '%s', got '%s'", want, got)
 	}
 
-	want = "Oscar November Echo Tango Whiskey Oscar"
+	want = "Oscar November Echo (space) Tango Whiskey Oscar"
 	got = phoneticise.Phoneticise("one two")
 	if want != got {
 		t.Errorf("want '%s', got '%s'", want, got)
