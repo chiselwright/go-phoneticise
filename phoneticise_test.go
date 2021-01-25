@@ -3,7 +3,7 @@ package phoneticise_test
 import (
 	"testing"
 
-	"github.com/chiselwright/phoneticise"
+	"github.com/chiselwright/go-phoneticise"
 )
 
 func TestLookup(t *testing.T) {

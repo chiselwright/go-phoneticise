@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/chiselwright/phoneticise"
+	"github.com/chiselwright/go-phoneticise"
 )
 
 func main() {

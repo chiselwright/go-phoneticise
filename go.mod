@@ -1,3 +1,3 @@
-module github.com/chiselwright/phoneticise
+module github.com/chiselwright/go-phoneticise
 
 go 1.15
