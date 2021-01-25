@@ -10,14 +10,10 @@ import (
 )
 
 func main() {
-	val := phoneticise.Phoneticise("Charlie")
-	fmt.Println(val)
-
-	val = phoneticise.Phoneticise("one two")
-	fmt.Println(val)
-
 	for {
 		var input string
+
+		fmt.Println("{empty input or ^C to quit}")
 
 		reader := bufio.NewReader(os.Stdin)
 		fmt.Print("Enter text: ")
@@ -27,6 +23,10 @@ func main() {
 		}
 
 		input = strings.TrimSuffix(input, "\n") // remove newline
+
+		if len(input) == 0 {
+			break
+		}
 
 		fmt.Println("» " + phoneticise.Phoneticise(input))
 	}
